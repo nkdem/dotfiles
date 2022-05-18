@@ -54,9 +54,8 @@ i=0; for name in ${yabai_create_spaces}; do
 done
 
 ## Sticky Windows
-yabai -m rule --add app="^Bitwarden$" sticky=on
 yabai -m rule --add app="^ProtonVPN$" sticky=on
-
+yabai -m rule --add app="^Digital Colou?r Meter$" sticky=on
 
 ## Screen 1 (Code)
 space=1
@@ -75,5 +74,6 @@ yabai -m rule --add app="^ProtonMail Bridge$" space="${space}"
 ## Screen 4 (Misc.)
 space=4
 yabai -m rule --add app="^Signal$" space="${space}"
+yabai -m rule --add app="^Bitwarden$" space="${space}"
 
 echo "yabai configuration loaded.."
