@@ -89,7 +89,669 @@
                                 "type": "basic"
                             }
                         ]
-                    }
+                    },
+                    {
+                        "description": "O-Launcher",
+                        "manipulators": [
+                          {
+                            "type": "basic",
+                            "from": {
+                              "key_code": "n",
+                              "modifiers": {
+                                "mandatory": [
+                  
+                                ],
+                                "optional": [
+                                  "any"
+                                ]
+                              }
+                            },
+                            "to": [
+                              {
+                                "shell_command": "open -a 'Standard Notes.app'"
+                              }
+                            ],
+                            "conditions": [
+                              {
+                                "type": "variable_if",
+                                "name": "launcher_mode",
+                                "value": 1
+                              }
+                            ]
+                          },
+                          {
+                            "type": "basic",
+                            "from": {
+                              "simultaneous": [
+                                {
+                                  "key_code": "o"
+                                },
+                                {
+                                  "key_code": "n"
+                                }
+                              ],
+                              "simultaneous_options": {
+                                "key_down_order": "strict",
+                                "key_up_order": "strict_inverse",
+                                "to_after_key_up": [
+                                  {
+                                    "set_variable": {
+                                      "name": "launcher_mode",
+                                      "value": 0
+                                    }
+                                  }
+                                ]
+                              },
+                              "modifiers": {
+                                "mandatory": [
+                  
+                                ],
+                                "optional": [
+                                  "any"
+                                ]
+                              }
+                            },
+                            "to": [
+                              {
+                                "set_variable": {
+                                  "name": "launcher_mode",
+                                  "value": 1
+                                }
+                              },
+                              {
+                                "shell_command": "open -a 'Standard Notes.app'"
+                              }
+                            ],
+                            "parameters": {
+                              "basic.simultaneous_threshold_milliseconds": 500
+                            }
+                          },
+                          {
+                            "type": "basic",
+                            "from": {
+                              "key_code": "f",
+                              "modifiers": {
+                                "mandatory": [
+                  
+                                ],
+                                "optional": [
+                                  "any"
+                                ]
+                              }
+                            },
+                            "to": [
+                              {
+                                "shell_command": "open -a 'Firefox.app'"
+                              }
+                            ],
+                            "conditions": [
+                              {
+                                "type": "variable_if",
+                                "name": "launcher_mode",
+                                "value": 1
+                              }
+                            ]
+                          },
+                          {
+                            "type": "basic",
+                            "from": {
+                              "simultaneous": [
+                                {
+                                  "key_code": "o"
+                                },
+                                {
+                                  "key_code": "f"
+                                }
+                              ],
+                              "simultaneous_options": {
+                                "key_down_order": "strict",
+                                "key_up_order": "strict_inverse",
+                                "to_after_key_up": [
+                                  {
+                                    "set_variable": {
+                                      "name": "launcher_mode",
+                                      "value": 0
+                                    }
+                                  }
+                                ]
+                              },
+                              "modifiers": {
+                                "mandatory": [
+                  
+                                ],
+                                "optional": [
+                                  "any"
+                                ]
+                              }
+                            },
+                            "to": [
+                              {
+                                "set_variable": {
+                                  "name": "launcher_mode",
+                                  "value": 1
+                                }
+                              },
+                              {
+                                "shell_command": "open -a 'Firefox.app'"
+                              }
+                            ],
+                            "parameters": {
+                              "basic.simultaneous_threshold_milliseconds": 500
+                            }
+                          },
+                          {
+                            "type": "basic",
+                            "from": {
+                              "key_code": "v",
+                              "modifiers": {
+                                "mandatory": [
+                  
+                                ],
+                                "optional": [
+                                  "any"
+                                ]
+                              }
+                            },
+                            "to": [
+                              {
+                                "shell_command": "open -a 'VSCodium.app'"
+                              }
+                            ],
+                            "conditions": [
+                              {
+                                "type": "variable_if",
+                                "name": "launcher_mode",
+                                "value": 1
+                              }
+                            ]
+                          },
+                          {
+                            "type": "basic",
+                            "from": {
+                              "simultaneous": [
+                                {
+                                  "key_code": "o"
+                                },
+                                {
+                                  "key_code": "v"
+                                }
+                              ],
+                              "simultaneous_options": {
+                                "key_down_order": "strict",
+                                "key_up_order": "strict_inverse",
+                                "to_after_key_up": [
+                                  {
+                                    "set_variable": {
+                                      "name": "launcher_mode",
+                                      "value": 0
+                                    }
+                                  }
+                                ]
+                              },
+                              "modifiers": {
+                                "mandatory": [
+                  
+                                ],
+                                "optional": [
+                                  "any"
+                                ]
+                              }
+                            },
+                            "to": [
+                              {
+                                "set_variable": {
+                                  "name": "launcher_mode",
+                                  "value": 1
+                                }
+                              },
+                              {
+                                "shell_command": "open -a 'VSCodium.app'"
+                              }
+                            ],
+                            "parameters": {
+                              "basic.simultaneous_threshold_milliseconds": 500
+                            }
+                          },
+                          {
+                            "type": "basic",
+                            "from": {
+                              "key_code": "i",
+                              "modifiers": {
+                                "mandatory": [
+                  
+                                ],
+                                "optional": [
+                                  "any"
+                                ]
+                              }
+                            },
+                            "to": [
+                              {
+                                "shell_command": "open -a 'iTerm.app'"
+                              }
+                            ],
+                            "conditions": [
+                              {
+                                "type": "variable_if",
+                                "name": "launcher_mode",
+                                "value": 1
+                              }
+                            ]
+                          },
+                          {
+                            "type": "basic",
+                            "from": {
+                              "simultaneous": [
+                                {
+                                  "key_code": "o"
+                                },
+                                {
+                                  "key_code": "i"
+                                }
+                              ],
+                              "simultaneous_options": {
+                                "key_down_order": "strict",
+                                "key_up_order": "strict_inverse",
+                                "to_after_key_up": [
+                                  {
+                                    "set_variable": {
+                                      "name": "launcher_mode",
+                                      "value": 0
+                                    }
+                                  }
+                                ]
+                              },
+                              "modifiers": {
+                                "mandatory": [
+                  
+                                ],
+                                "optional": [
+                                  "any"
+                                ]
+                              }
+                            },
+                            "to": [
+                              {
+                                "set_variable": {
+                                  "name": "launcher_mode",
+                                  "value": 1
+                                }
+                              },
+                              {
+                                "shell_command": "open -a 'iTerm.app'"
+                              }
+                            ],
+                            "parameters": {
+                              "basic.simultaneous_threshold_milliseconds": 500
+                            }
+                          },
+                          {
+                            "type": "basic",
+                            "from": {
+                              "key_code": "x",
+                              "modifiers": {
+                                "mandatory": [
+                  
+                                ],
+                                "optional": [
+                                  "any"
+                                ]
+                              }
+                            },
+                            "to": [
+                              {
+                                "shell_command": "open -a 'Xcode.app'"
+                              }
+                            ],
+                            "conditions": [
+                              {
+                                "type": "variable_if",
+                                "name": "launcher_mode",
+                                "value": 1
+                              }
+                            ]
+                          },
+                          {
+                            "type": "basic",
+                            "from": {
+                              "simultaneous": [
+                                {
+                                  "key_code": "o"
+                                },
+                                {
+                                  "key_code": "x"
+                                }
+                              ],
+                              "simultaneous_options": {
+                                "key_down_order": "strict",
+                                "key_up_order": "strict_inverse",
+                                "to_after_key_up": [
+                                  {
+                                    "set_variable": {
+                                      "name": "launcher_mode",
+                                      "value": 0
+                                    }
+                                  }
+                                ]
+                              },
+                              "modifiers": {
+                                "mandatory": [
+                  
+                                ],
+                                "optional": [
+                                  "any"
+                                ]
+                              }
+                            },
+                            "to": [
+                              {
+                                "set_variable": {
+                                  "name": "launcher_mode",
+                                  "value": 1
+                                }
+                              },
+                              {
+                                "shell_command": "open -a 'Xcode.app'"
+                              }
+                            ],
+                            "parameters": {
+                              "basic.simultaneous_threshold_milliseconds": 500
+                            }
+                          },
+                          {
+                            "type": "basic",
+                            "from": {
+                              "key_code": "s",
+                              "modifiers": {
+                                "mandatory": [
+                  
+                                ],
+                                "optional": [
+                                  "any"
+                                ]
+                              }
+                            },
+                            "to": [
+                              {
+                                "shell_command": "open -a 'Signal.app'"
+                              }
+                            ],
+                            "conditions": [
+                              {
+                                "type": "variable_if",
+                                "name": "launcher_mode",
+                                "value": 1
+                              }
+                            ]
+                          },
+                          {
+                            "type": "basic",
+                            "from": {
+                              "simultaneous": [
+                                {
+                                  "key_code": "o"
+                                },
+                                {
+                                  "key_code": "s"
+                                }
+                              ],
+                              "simultaneous_options": {
+                                "key_down_order": "strict",
+                                "key_up_order": "strict_inverse",
+                                "to_after_key_up": [
+                                  {
+                                    "set_variable": {
+                                      "name": "launcher_mode",
+                                      "value": 0
+                                    }
+                                  }
+                                ]
+                              },
+                              "modifiers": {
+                                "mandatory": [
+                  
+                                ],
+                                "optional": [
+                                  "any"
+                                ]
+                              }
+                            },
+                            "to": [
+                              {
+                                "set_variable": {
+                                  "name": "launcher_mode",
+                                  "value": 1
+                                }
+                              },
+                              {
+                                "shell_command": "open -a 'Signal.app'"
+                              }
+                            ],
+                            "parameters": {
+                              "basic.simultaneous_threshold_milliseconds": 500
+                            }
+                          },
+                          {
+                            "type": "basic",
+                            "from": {
+                              "key_code": "b",
+                              "modifiers": {
+                                "mandatory": [
+                  
+                                ],
+                                "optional": [
+                                  "any"
+                                ]
+                              }
+                            },
+                            "to": [
+                              {
+                                "shell_command": "open -a 'Bitwarden.app'"
+                              }
+                            ],
+                            "conditions": [
+                              {
+                                "type": "variable_if",
+                                "name": "launcher_mode",
+                                "value": 1
+                              }
+                            ]
+                          },
+                          {
+                            "type": "basic",
+                            "from": {
+                              "simultaneous": [
+                                {
+                                  "key_code": "o"
+                                },
+                                {
+                                  "key_code": "b"
+                                }
+                              ],
+                              "simultaneous_options": {
+                                "key_down_order": "strict",
+                                "key_up_order": "strict_inverse",
+                                "to_after_key_up": [
+                                  {
+                                    "set_variable": {
+                                      "name": "launcher_mode",
+                                      "value": 0
+                                    }
+                                  }
+                                ]
+                              },
+                              "modifiers": {
+                                "mandatory": [
+                  
+                                ],
+                                "optional": [
+                                  "any"
+                                ]
+                              }
+                            },
+                            "to": [
+                              {
+                                "set_variable": {
+                                  "name": "launcher_mode",
+                                  "value": 1
+                                }
+                              },
+                              {
+                                "shell_command": "open -a 'Bitwarden.app'"
+                              }
+                            ],
+                            "parameters": {
+                              "basic.simultaneous_threshold_milliseconds": 500
+                            }
+                          },
+                          {
+                            "type": "basic",
+                            "from": {
+                              "key_code": "p",
+                              "modifiers": {
+                                "mandatory": [
+                  
+                                ],
+                                "optional": [
+                                  "any"
+                                ]
+                              }
+                            },
+                            "to": [
+                              {
+                                "shell_command": "open -a 'ProtonVPN.app'"
+                              }
+                            ],
+                            "conditions": [
+                              {
+                                "type": "variable_if",
+                                "name": "launcher_mode",
+                                "value": 1
+                              }
+                            ]
+                          },
+                          {
+                            "type": "basic",
+                            "from": {
+                              "simultaneous": [
+                                {
+                                  "key_code": "o"
+                                },
+                                {
+                                  "key_code": "p"
+                                }
+                              ],
+                              "simultaneous_options": {
+                                "key_down_order": "strict",
+                                "key_up_order": "strict_inverse",
+                                "to_after_key_up": [
+                                  {
+                                    "set_variable": {
+                                      "name": "launcher_mode",
+                                      "value": 0
+                                    }
+                                  }
+                                ]
+                              },
+                              "modifiers": {
+                                "mandatory": [
+                  
+                                ],
+                                "optional": [
+                                  "any"
+                                ]
+                              }
+                            },
+                            "to": [
+                              {
+                                "set_variable": {
+                                  "name": "launcher_mode",
+                                  "value": 1
+                                }
+                              },
+                              {
+                                "shell_command": "open -a 'ProtonVPN.app'"
+                              }
+                            ],
+                            "parameters": {
+                              "basic.simultaneous_threshold_milliseconds": 500
+                            }
+                          },
+                          {
+                            "type": "basic",
+                            "from": {
+                              "key_code": "m",
+                              "modifiers": {
+                                "mandatory": [
+                  
+                                ],
+                                "optional": [
+                                  "any"
+                                ]
+                              }
+                            },
+                            "to": [
+                              {
+                                "shell_command": "open -a 'Mail.app'"
+                              }
+                            ],
+                            "conditions": [
+                              {
+                                "type": "variable_if",
+                                "name": "launcher_mode",
+                                "value": 1
+                              }
+                            ]
+                          },
+                          {
+                            "type": "basic",
+                            "from": {
+                              "simultaneous": [
+                                {
+                                  "key_code": "o"
+                                },
+                                {
+                                  "key_code": "m"
+                                }
+                              ],
+                              "simultaneous_options": {
+                                "key_down_order": "strict",
+                                "key_up_order": "strict_inverse",
+                                "to_after_key_up": [
+                                  {
+                                    "set_variable": {
+                                      "name": "launcher_mode",
+                                      "value": 0
+                                    }
+                                  }
+                                ]
+                              },
+                              "modifiers": {
+                                "mandatory": [
+                  
+                                ],
+                                "optional": [
+                                  "any"
+                                ]
+                              }
+                            },
+                            "to": [
+                              {
+                                "set_variable": {
+                                  "name": "launcher_mode",
+                                  "value": 1
+                                }
+                              },
+                              {
+                                "shell_command": "open -a 'Mail.app'"
+                              }
+                            ],
+                            "parameters": {
+                              "basic.simultaneous_threshold_milliseconds": 500
+                            }
+                          }
+                        ]
+                      }
                 ]
             },
             "devices": [],
