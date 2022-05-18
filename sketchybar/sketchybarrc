@@ -1,0 +1,104 @@
+PLUGINS_DIR="$HOME/.config/sketchybar/plugins"
+PYTHON="~/.pyenv/shims/python3"
+
+sketchybar --bar height=32        \
+                 blur_radius=50   \
+                 position=top     \
+                 padding_left=5   \
+                 padding_right=5  \
+                 color=0xff1A1B25
+
+sketchybar --default updates=when_shown                    \
+                     drawing=on                            \
+                     icon.font="Hack Nerd Font:Bold:17.0"  \
+                     icon.color=0xffffffff                 \
+                     label.font="Hack Nerd Font:Bold:14.0" \
+                     label.color=0xffffffff                \
+                     label.padding_left=4                  \
+                     label.padding_right=4                 \
+                     icon.padding_left=8                   \
+                     label.padding_right=8
+
+
+############## PRIMARY DISPLAY SPACES ##############
+# SPACE 1: CODE ICON
+sketchybar --add space code left                              \
+           --set code associated_display=1                    \
+                      associated_space=1                      \
+                      icon.font="Hack Nerd Font:Bold:20.0"    \
+                      icon=                                  \
+                      icon.highlight_color=0xffB59DF1         \
+                      label=code                              \
+                      click_script="yabai -m space --focus 1" \
+                                                              \
+# SPACE 2: WEB ICON
+           --add space web left                               \
+           --set web  associated_display=1                    \
+                      associated_space=2                      \
+                      icon=                                  \
+                      icon.highlight_color=0xffB59DF1         \
+                      label=web                               \
+                      click_script="yabai -m space --focus 2" \
+							      \
+# SPACE 3: MAIL ICON
+           --add space mail left                              \
+           --set mail  associated_display=1                   \
+                      associated_space=3                      \
+                      icon=                                  \
+                      icon.highlight_color=0xffB59DF1         \
+                      label=mail                              \
+                      click_script="yabai -m space --focus 3" \
+	              script="$PLUGINS_DIR/mailIndicator.sh"  \
+		      update_freq=60                          \
+# SPACE 4: MISC ICON
+           --add space misc left                              \
+           --set misc  associated_display=1                   \
+                      associated_space=4                      \
+                      icon=                                  \
+                      icon.highlight_color=0xffB59DF1         \
+                      label=misc.                             \
+                      click_script="yabai -m space --focus 4" \
+
+
+############## CODE ITEM LEFT ##############
+sketchybar --add item space_separator left                                                  \
+           --set space_separator  icon=                                                    \
+                                  associated_space=1                                        \
+                                  icon.padding_left=15                                      \
+                                  label.padding_right=15                                    \
+                                  icon.font="Hack Nerd Font:Bold:15.0"                      \
+                                                                                            \
+           --add item gitNotifications left                                                 \
+           --set gitNotifications associated_space=1                                        \
+                                  update_freq=300                                           \
+                                  icon.font="Hack Nerd Font:Bold:18.0"                      \
+                                  icon=                                                    \
+                                  script="$PLUGINS_DIR/gitNotifications.sh"                 \
+                                  click_script="open https://github.com/notifications"      \
+           --subscribe gitNotifications system_woke                                         \
+                                                                                            \
+           --add item githubIndicator left                                                  \
+           --set githubIndicator  associated_space=1                                        \
+                                  update_freq=1000                                          \
+                                  icon.font="Hack Nerd Font:Bold:18.0"                      \
+                                  icon=                                                    \
+                                  click_script="open https://github.com"                    \
+                                  script="$PLUGINS_DIR/githubIndicator.sh"                  \
+           --subscribe githubIndicator system_woke                                          \
+
+############## RIGHT ITEMS ##############
+sketchybar --add item clock right                                                                  \
+           --set clock         update_freq=20                                                      \
+                               script="$PLUGINS_DIR/clock.sh"                                      \
+			       									   \
+	   --add item battery right								   \
+	   --set battery 	update_freq=60							   \
+	   			script="$PLUGINS_DIR/power.sh" 					   \
+												   \
+	   --add item btc right									   \
+	   --set btc		update_freq=60							   \
+	   			script="$PYTHON $PLUGINS_DIR/btc.py"                               \
+												   \
+sketchybar --update
+
+echo "sketchybar configuration loaded.."

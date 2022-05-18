@@ -1,0 +1,12 @@
+{
+    "jobs_tab_visibility": "closed",
+    "show_terminal_tab": false,
+    "initial_working_directory": "~",
+    "editor_theme": "Tomorrow Night 80s",
+    "posix_terminal_shell": "bash",
+    "rmd_viewer_type": "pane",
+    "default_project_location": "~/code/R",
+    "spelling_dictionary_language": "en_GB",
+    "source_with_echo": true,
+    "new_proj_git_init": true
+}
