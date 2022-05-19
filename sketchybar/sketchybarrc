@@ -30,18 +30,18 @@ sketchybar --add space code left                              \
                       icon.highlight_color=0xffB59DF1         \
                       label=code                              \
                       click_script="yabai -m space --focus 1" \
-                                                              \
-# SPACE 2: WEB ICON
-           --add space web left                               \
+                                                              
+# SPACE 2: WEB ICON 
+sketchybar --add space web left                               \
            --set web  associated_display=1                    \
                       associated_space=2                      \
                       icon=                                  \
                       icon.highlight_color=0xffB59DF1         \
                       label=web                               \
                       click_script="yabai -m space --focus 2" \
-							      \
+							      
 # SPACE 3: MAIL ICON
-           --add space mail left                              \
+sketchybar --add space mail left                              \
            --set mail  associated_display=1                   \
                       associated_space=3                      \
                       icon=                                  \
@@ -51,7 +51,7 @@ sketchybar --add space code left                              \
 	              script="$PLUGINS_DIR/mailIndicator.sh"  \
 		      update_freq=60                          \
 # SPACE 4: MISC ICON
-           --add space misc left                              \
+sketchybar --add space misc left                              \
            --set misc  associated_display=1                   \
                       associated_space=4                      \
                       icon=                                  \
@@ -95,9 +95,9 @@ sketchybar --add item clock right                                               
 	   --set battery 	update_freq=60							   \
 	   			script="$PLUGINS_DIR/power.sh" 					   \
 												   \
-	   --add item btc right									   \
-	   --set btc		update_freq=60							   \
-	   			script="$PYTHON $PLUGINS_DIR/btc.py"                               \
+	   --add item crypto right								   \
+	   --set crypto 	update_freq=15                  				   \
+	   			script="$PYTHON $PLUGINS_DIR/crypto.py"                            \
 												   \
 sketchybar --update
 
