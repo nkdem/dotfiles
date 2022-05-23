@@ -19,6 +19,11 @@ if [ $RUNNING == 0 ]; then
   else 
 	  sketchybar --set $NAME icon.highlight=off
   fi
+  osascript <<EOF 
+tell application "System Events" to tell process "Mail"
+	click menu item "Synchronise All Accounts" of menu "Mailbox" of menu bar 1
+end tell
+EOF
 else
   sketchybar --set $NAME label=
 fi
