@@ -1,6 +1,6 @@
 PLUGINS_DIR="$HOME/.config/sketchybar/plugins"
-PYTHON="~/.pyenv/shims/python3"
-
+PYTHON="$PLUGINS_DIR/venv/bin/python"
+  
 sketchybar --bar height=32        \
                  blur_radius=50   \
                  position=top     \
@@ -90,15 +90,23 @@ sketchybar --add item space_separator left                                      
 sketchybar --add item clock right                                                                  \
            --set clock         update_freq=20                                                      \
                                script="$PLUGINS_DIR/clock.sh"                                      \
-			       									   \
+	   --subscribe clock system_woke   							   \
+	   											   \
 	   --add item battery right								   \
 	   --set battery 	update_freq=60							   \
 	   			script="$PLUGINS_DIR/power.sh" 					   \
-												   \
+	   --subscribe battery system_woke   							   \
+	   											   \
 	   --add item crypto right								   \
 	   --set crypto 	update_freq=15                  				   \
 	   			script="$PYTHON $PLUGINS_DIR/crypto.py"                            \
+	   --subscribe crypto system_woke   							   \
 												   \
+	   --add item weather right 								   \
+	   --set weather 	update_freq=3600 						   \
+	   			script="$PYTHON $PLUGINS_DIR/weather.py"			   \
+	   --subscribe weather system_woke   							   \
+											           \
 sketchybar --update
 
 echo "sketchybar configuration loaded.."
