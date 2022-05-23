@@ -50,6 +50,8 @@ sketchybar --add space mail left                              \
                       click_script="yabai -m space --focus 3" \
 	              script="$PLUGINS_DIR/mailIndicator.sh"  \
 		      update_freq=60                          \
+		      --subscribe mail system_woke   	      \
+		      					      \
 # SPACE 4: MISC ICON
 sketchybar --add space misc left                              \
            --set misc  associated_display=1                   \

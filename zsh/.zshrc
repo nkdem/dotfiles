@@ -4,8 +4,6 @@ PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}%{$fg[blue]%} %{$fg[magenta]%
 
 [ -f $HOME/.config/shell/aliasrc ] && source $HOME/.config/shell/aliasrc
 
-source $HOME/.config/shell/functions/statusBar
-
 # History in cache directory:
 HISTSIZE=10000000
 SAVEHIST=10000000
