@@ -21,8 +21,8 @@ class Weather:
         elif 'cloud' in desc:
             self.desc = '☁️'
         else:
-            sunrise = [int(x) for x in astronomy[0]['sunrise'].replace(' AM', '').split(':')]
-            sunset = [int(x) for x in astronomy[0]['sunset'].replace(' PM', '').split(':')]
+            sunrise = [int(x) for x in self.astronomy[0]['sunrise'].replace(' AM', '').split(':')]
+            sunset = [int(x) for x in self.astronomy[0]['sunset'].replace(' PM', '').split(':')]
             sunset[0] += 12
             current_hour = time.localtime().tm_hour
             if sunrise[0] >= current_hour or current_hour >= sunset[0]:
