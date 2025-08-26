@@ -1,8 +1,18 @@
 tap "nikitabobko/tap"
+# Select default apps for documents and URL schemes on macOS
+brew "duti"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Kubernetes package manager
+brew "helm"
+# Little helper to run CNCF's k3s in Docker
+brew "k3d"
+# Kubernetes CLI To Manage Your Clusters In Style!
+brew "k9s"
+# Tool that can switch between kubectl contexts easily and create aliases
+brew "kubectx"
 # Mac App Store command-line interface
 brew "mas"
 # Ambitious Vim-fork focused on extensibility and agility
@@ -21,6 +31,8 @@ cask "amethyst"
 cask "betterdisplay"
 # Tool to customise input devices and automate computer systems
 cask "bettertouchtool"
+# E-books management software
+cask "calibre"
 # Host-based application firewall
 cask "little-snitch"
 # Replacement for Docker Desktop

@@ -51,6 +51,7 @@ export SSH_AUTH_SOCK=/Users/nkdem/Library/Containers/com.bitwarden.desktop/Data/
 
 eval "$(zoxide init zsh)"
 export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
+export PATH="$PATH:$GOPPATH/bin"
 
 alias vim=nvim
 alias preview="wezterm imgcat"
