@@ -35,6 +35,8 @@ cask "bettertouchtool"
 cask "calibre"
 # Host-based application firewall
 cask "little-snitch"
+# Privacy-first, open-source platform for knowledge sharing and management
+cask "logseq"
 # Replacement for Docker Desktop
 cask "orbstack"
 # WebKit based web browser
