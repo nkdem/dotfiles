@@ -65,3 +65,6 @@ zinit snippet OMZ::plugins/git/git.plugin.zsh
 zinit snippet OMZ::plugins/brew/brew.plugin.zsh
 zinit snippet OMZ::plugins/golang/golang.plugin.zsh
 zinit light zsh-users/zsh-syntax-highlighting
+
+
+source ~/.config/zsh/secrets

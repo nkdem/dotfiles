@@ -1,4 +1,5 @@
 tap "nikitabobko/tap"
+tap "oven-sh/bun"
 # Select default apps for documents and URL schemes on macOS
 brew "duti"
 # Command-line fuzzy finder written in Go
@@ -17,6 +18,8 @@ brew "kubectx"
 brew "mas"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Platform built on V8 to build network applications
+brew "node"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Rust toolchain installer
@@ -25,6 +28,8 @@ brew "rustup"
 brew "uv"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
+# Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
+brew "oven-sh/bun/bun"
 # Automatic tiling window manager similar to xmonad
 cask "amethyst"
 # Display management tool
