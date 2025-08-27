@@ -33,6 +33,10 @@ cask "betterdisplay"
 cask "bettertouchtool"
 # E-books management software
 cask "calibre"
+# Clipboard extension app
+cask "clipy"
+# Image, video and clipboard optimiser
+cask "clop"
 # Host-based application firewall
 cask "little-snitch"
 # Privacy-first, open-source platform for knowledge sharing and management
