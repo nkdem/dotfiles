@@ -1,3 +1,4 @@
+tap "buo/cask-upgrade"
 tap "nikitabobko/tap"
 tap "oven-sh/bun"
 # Select default apps for documents and URL schemes on macOS
@@ -42,10 +43,14 @@ cask "calibre"
 cask "clipy"
 # Image, video and clipboard optimiser
 cask "clop"
+# Free cross-platform office suite, fresh version
+cask "libreoffice"
 # Host-based application firewall
 cask "little-snitch"
 # Privacy-first, open-source platform for knowledge sharing and management
 cask "logseq"
+# Full TeX Live distribution without GUI applications
+cask "mactex-no-gui"
 # Replacement for Docker Desktop
 cask "orbstack"
 # WebKit based web browser
@@ -62,5 +67,7 @@ cask "raycast"
 cask "signal"
 # GPU-accelerated cross-platform terminal emulator and multiplexer
 cask "wezterm"
+# Collect, organise, cite, and share research sources
+cask "zotero"
 mas "Bitwarden", id: 1352778147
 mas "rcmd", id: 1596283165
