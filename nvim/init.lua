@@ -33,10 +33,10 @@ vim.o.showmode = false
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
-vim.schedule(function()
-	vim.o.clipboard = "unnamedplus"
-end)
-
+-- vim.schedule(function()
+-- 	vim.o.clipboard = "unnamedplus"
+-- end)
+--
 -- Enable break indent
 vim.o.breakindent = true
 
@@ -454,6 +454,9 @@ require("lazy").setup({
 						vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = "LSP: " .. desc })
 					end
 
+					map("<leader>]", vim.diagnostic.goto_next, "Go to next diagnostic")
+					map("<leader>[", vim.diagnostic.goto_prev, "Go to previous diagnostic")
+
 					-- Rename the variable under your cursor.
 					--  Most Language Servers support renaming across files, etc.
 					map("grn", vim.lsp.buf.rename, "[R]e[n]ame")
@@ -739,6 +742,7 @@ require("lazy").setup({
 				opts = {},
 			},
 			"folke/lazydev.nvim",
+			"Kaiser-Yang/blink-cmp-avante",
 		},
 		--- @module 'blink.cmp'
 		--- @type blink.cmp.Config
@@ -784,9 +788,16 @@ require("lazy").setup({
 			},
 
 			sources = {
-				default = { "lsp", "path", "snippets", "lazydev" },
+				default = { "lsp", "path", "snippets", "lazydev", "avante" },
 				providers = {
 					lazydev = { module = "lazydev.integrations.blink", score_offset = 100 },
+					avante = {
+						module = "blink-cmp-avante",
+						name = "Avante",
+						opts = {
+							-- options for blink-cmp-avante
+						},
+					},
 				},
 			},
 
@@ -930,6 +941,7 @@ require("lazy").setup({
 	-- AI
 	require("kickstart.plugins.copilot"),
 	require("kickstart.plugins.avante"),
+	require("kickstart.plugins.mcphub"),
 }, {
 	ui = {
 		-- If you are using a Nerd Font: set icons to an empty table which will use the

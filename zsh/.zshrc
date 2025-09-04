@@ -1,3 +1,7 @@
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=10000000
+SAVEHIST=10000000
+
 autoload -U colors && colors	# Load colors
 PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
@@ -68,3 +72,5 @@ zinit light zsh-users/zsh-syntax-highlighting
 
 
 source ~/.config/zsh/secrets
+
+export PATH="/Users/nkdem/.bun/bin:$PATH"

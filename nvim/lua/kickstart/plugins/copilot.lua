@@ -15,9 +15,9 @@ return {
 			hide_during_completion = true,
 			debounce = 75,
 			keymap = {
-				accept = "<Tab>",
-				accept_word = "<M-n>",
-				dismiss = "<C-]>",
+				accept = false,
+				accept_word = "<Tab>",
+				dismiss = "<Esc>",
 			},
 		},
 	},
