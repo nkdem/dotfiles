@@ -53,8 +53,6 @@ brew "oven-sh/bun/bun"
 cask "amethyst"
 # Display management tool
 cask "betterdisplay"
-# Tool to customise input devices and automate computer systems
-cask "bettertouchtool"
 # E-books management software
 cask "calibre"
 # Anthropic's official Claude AI desktop app
@@ -89,6 +87,8 @@ cask "protonvpn"
 cask "raycast"
 # Instant messaging application focusing on security
 cask "signal"
+# Google Chromium, sans integration with Google
+cask "ungoogled-chromium"
 # GPU-accelerated cross-platform terminal emulator and multiplexer
 cask "wezterm"
 # Collect, organise, cite, and share research sources
