@@ -938,10 +938,6 @@ require("lazy").setup({
 	-- require 'kickstart.plugins.neo-tree',
 	require("kickstart.plugins.gitsigns"), -- adds gitsigns recommend keymaps
 	require("kickstart.plugins.gitsigns"), -- adds gitsigns recommend keymaps
-	-- AI
-	require("kickstart.plugins.copilot"),
-	require("kickstart.plugins.avante"),
-	require("kickstart.plugins.mcphub"),
 }, {
 	ui = {
 		-- If you are using a Nerd Font: set icons to an empty table which will use the

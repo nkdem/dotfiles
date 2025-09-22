@@ -78,6 +78,29 @@ return {
 			end,
 			desc = "Debug: See last session result.",
 		},
+		-- Python-specific keymaps
+		{
+			"<leader>dpr",
+			function()
+				require("dap-python").test_method()
+			end,
+			desc = "Debug: Python test method",
+		},
+		{
+			"<leader>dpc",
+			function()
+				require("dap-python").test_class()
+			end,
+			desc = "Debug: Python test class",
+		},
+		{
+			"<leader>ds",
+			function()
+				require("dap-python").debug_selection()
+			end,
+			desc = "Debug: Python selection",
+			mode = "v",
+		},
 	},
 	config = function()
 		local dap = require("dap")
@@ -97,6 +120,7 @@ return {
 			ensure_installed = {
 				-- Update this to ensure that you have the debuggers for the langs you want
 				"delve",
+				"debugpy", -- Python debugger
 			},
 		})
 
@@ -126,7 +150,7 @@ return {
 		-- vim.api.nvim_set_hl(0, 'DapBreak', { fg = '#e51400' })
 		-- vim.api.nvim_set_hl(0, 'DapStop', { fg = '#ffcc00' })
 		-- local breakpoint_icons = vim.g.have_nerd_font
-		--     and { Breakpoint = '', BreakpointCondition = '', BreakpointRejected = '', LogPoint = '', Stopped = '' }
+		--     and { Breakpoint = '', BreakpointCondition = '', BreakpointRejected = '', LogPoint = '', Stopped = '' }
 		--   or { Breakpoint = '●', BreakpointCondition = '⊜', BreakpointRejected = '⊘', LogPoint = '◆', Stopped = '⭔' }
 		-- for type, icon in pairs(breakpoint_icons) do
 		--   local tp = 'Dap' .. type
@@ -147,6 +171,75 @@ return {
 			},
 		})
 
-		require("dap-python").setup("uv")
+		-- Python debugger setup
+		-- Use the debugpy-adapter executable installed by uv tool
+		local debugpy_adapter = vim.fn.system("which debugpy-adapter"):gsub("\n", "")
+
+		if vim.fn.executable(debugpy_adapter) == 1 then
+			-- Configure the adapter manually to use uv's debugpy
+			require("dap").adapters.python = {
+				type = "executable",
+				command = debugpy_adapter,
+				args = {},
+			}
+
+			-- Set up basic configurations since we're not using the setup() function
+			require("dap").configurations.python = require("dap").configurations.python or {}
+		else
+			-- Fallback: install debugpy in system python and use normal setup
+			print("debugpy-adapter not found. Install with: pip3 install debugpy")
+			require("dap-python").setup("python3")
+		end
+
+		-- Optional: Configure Python debugging for different scenarios
+		table.insert(dap.configurations.python, {
+			type = "python",
+			request = "launch",
+			name = "Launch file (uv venv)",
+			program = "${file}",
+			python = vim.fn.getcwd() .. "/.venv/bin/python", -- Use project's virtual env
+			console = "integratedTerminal",
+		})
+
+		table.insert(dap.configurations.python, {
+			type = "python",
+			request = "launch",
+			name = "Launch file with arguments",
+			program = "${file}",
+			args = function()
+				local args_string = vim.fn.input("Arguments: ")
+				return vim.split(args_string, " ")
+			end,
+			console = "integratedTerminal",
+		})
+
+		-- Configuration for debugging Flask apps
+		table.insert(dap.configurations.python, {
+			type = "python",
+			request = "launch",
+			name = "Flask",
+			module = "flask",
+			args = {
+				"run",
+				"--no-debugger",
+				"--no-reload",
+			},
+			jinja = true,
+			console = "integratedTerminal",
+		})
+
+		-- Configuration for debugging Django apps
+		table.insert(dap.configurations.python, {
+			type = "python",
+			request = "launch",
+			name = "Django",
+			program = "${workspaceFolder}/manage.py",
+			args = {
+				"runserver",
+				"--noreload",
+			},
+			django = true,
+			console = "integratedTerminal",
+		})
 	end,
 }
