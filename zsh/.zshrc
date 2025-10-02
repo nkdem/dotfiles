@@ -3,7 +3,16 @@ HISTSIZE=10000000
 SAVEHIST=10000000
 
 autoload -U colors && colors	# Load colors
-PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+
+# Shorten ProtonDrive path in prompt
+prompt_shortened_path() {
+  local path="${PWD/#$HOME/~}"
+  path="${path//\/Library\/CloudStorage\/ProtonDrive-nikodemb@protonmail.com-folder/~proton}"
+  echo "$path"
+}
+
+setopt PROMPT_SUBST
+PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}\$(prompt_shortened_path)%{$fg[red]%}]%{$reset_color%}$%b "
 
 
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -77,3 +86,6 @@ zinit light zsh-users/zsh-syntax-highlighting
 source ~/.config/zsh/secrets
 
 export PATH="/Users/nkdem/.bun/bin:$PATH"
+
+# CHiME9-ECHI PYTHONPATH
+export PYTHONPATH="/Users/nkdem/Library/CloudStorage/ProtonDrive-nikodemb@protonmail.com-folder/University/MInf/MInf 2/impl/CHiME9-ECHI/src:$PYTHONPATH"
