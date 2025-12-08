@@ -23,7 +23,7 @@ source "${ZINIT_HOME}/zinit.zsh"
 unalias zi
 
 
-autoload -U compinit
+autoload -Uz compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
 compinit
@@ -82,8 +82,6 @@ zinit snippet OMZ::plugins/brew/brew.plugin.zsh
 zinit snippet OMZ::plugins/golang/golang.plugin.zsh
 zinit light zsh-users/zsh-syntax-highlighting
 
-
-source ~/.config/zsh/secrets
 
 export PATH="/Users/nkdem/.bun/bin:$PATH"
 

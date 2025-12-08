@@ -81,9 +81,5 @@
   "relative_line_numbers": true,
   "ui_font_size": 16,
   "buffer_font_size": 15,
-  "theme": {
-    "mode": "system",
-    "light": "Ayu Light",
-    "dark": "Tokyo Night"
-  }
+  "theme": "Ayu Dark"
 }

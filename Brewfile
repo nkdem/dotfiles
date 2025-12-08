@@ -6,15 +6,11 @@ tap "nikitabobko/tap"
 tap "oven-sh/bun"
 tap "veeso/termscp"
 # GitOps Continuous Delivery for Kubernetes
-brew "argocd"
 # Official Amazon AWS command-line interface
-brew "awscli"
 # Statistics utility to count lines of code
 brew "cloc"
 # Home for the Cluster Management API work, a subproject of sig-cluster-lifecycle
-brew "clusterctl"
 # Build control planes without needing to write code
-brew "crossplane"
 # More intuitive version of du in rust
 brew "dust"
 # Select default apps for documents and URL schemes on macOS
@@ -23,29 +19,12 @@ brew "duti"
 brew "ffmpeg"
 # Command-line fuzzy finder written in Go
 brew "fzf"
-# Open-source, cross-platform JavaScript runtime environment
-brew "node"
-# Interact with Google Gemini AI models from the command-line
-brew "gemini-cli"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
 # Fast linters runner for Go
 brew "golangci-lint"
 # Kubernetes package manager
 brew "helm"
-# Handy way to save and run project-specific commands
-brew "just"
-# Little helper to run CNCF's k3s in Docker
-brew "k3d"
-# Kubernetes CLI To Manage Your Clusters In Style!
-brew "k9s"
-# Run local Kubernetes cluster in Docker
-brew "kind"
-# Tool that can switch between kubectl contexts easily and create aliases
-brew "kubectx"
-# Template-free customization of Kubernetes YAML manifests
-brew "kustomize"
-# Mac App Store command-line interface
 brew "mas"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
@@ -105,10 +84,6 @@ cask "clop"
 cask "crossover"
 # Voice and text chat software
 cask "discord"
-# YouTube player focusing on privacy
-cask "freetube"
-# Update maps and software, sync with Garmin Connect and register your device
-cask "garmin-express"
 # Free cross-platform office suite, fresh version
 cask "libreoffice"
 # Host-based application firewall
@@ -117,8 +92,6 @@ cask "little-snitch"
 cask "logseq"
 # Lyrics for Apple Music and Spotify
 cask "lyric-fever"
-# Full TeX Live distribution without GUI applications
-cask "mactex-no-gui"
 # Replacement for Docker Desktop
 cask "orbstack"
 # WebKit based web browser
@@ -139,8 +112,6 @@ cask "sioyek"
 cask "slack"
 # Music streaming service
 cask "spotify"
-# Google Chromium, sans integration with Google
-cask "ungoogled-chromium"
 # GPU-accelerated cross-platform terminal emulator and multiplexer
 cask "wezterm"
 # Multiplayer code editor

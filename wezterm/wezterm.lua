@@ -5,7 +5,8 @@ local config = wezterm.config_builder()
 
 config.enable_scroll_bar = true
 
-config.color_scheme = "Tokyo Night"
+config.color_scheme = "Tokyo Night Storm"
+
 config.window_background_opacity = 0.98
 
 config.font_size = 20
@@ -16,6 +17,7 @@ config.send_composed_key_when_right_alt_is_pressed = true
 config.leader = { key = "§", timeout_milliseconds = 1000 }
 
 config.keys = {
+	{ key = "Enter", mods = "SHIFT", action = wezterm.action({ SendString = "\x1b\r" }) },
 	{
 		key = "l",
 		mods = "CTRL|SHIFT",
