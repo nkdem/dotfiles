@@ -7,10 +7,23 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "agent": {
+    "default_profile": "write",
+    "always_allow_tool_actions": true,
+    "default_model": {
+      "provider": "google",
+      "model": "gemini-2.5-pro"
+    },
+    "inline_assistant_model": {
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4-5"
+    }
+  },
   "ssh_connections": [
     {
       "host": "login.archer2.ac.uk",
       "username": "s2203859",
+      "args": [],
       "projects": [
         {
           "paths": [
@@ -19,7 +32,38 @@
         },
         {
           "paths": [
+            "/home/m25ext/m25ext/s2203859/MP/CW1"
+          ]
+        },
+        {
+          "paths": [
+            "/home/m25ext/m25ext/s2203859/MP/Exercises/Experimental Collectives"
+          ]
+        },
+        {
+          "paths": [
+            "/home/m25ext/m25ext/s2203859/TP/CW1/ADI/C"
+          ]
+        },
+        {
+          "paths": [
+            "/home/m25ext/m25ext/s2203859/tp_cw2"
+          ]
+        },
+        {
+          "paths": [
             "/work/m25ext/m25ext/s2203859/./"
+          ]
+        }
+      ]
+    },
+    {
+      "host": "mlp",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/s2203859"
           ]
         }
       ]
@@ -34,6 +78,7 @@
     "metrics": false
   },
   "vim_mode": true,
+  "relative_line_numbers": true,
   "ui_font_size": 16,
   "buffer_font_size": 15,
   "theme": {

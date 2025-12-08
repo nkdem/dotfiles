@@ -89,3 +89,6 @@ export PATH="/Users/nkdem/.bun/bin:$PATH"
 
 # CHiME9-ECHI PYTHONPATH
 export PYTHONPATH="/Users/nkdem/Library/CloudStorage/ProtonDrive-nikodemb@protonmail.com-folder/University/MInf/MInf 2/impl/CHiME9-ECHI/src:$PYTHONPATH"
+export AWS_PROFILE=Cofounder
+
+export PATH="$PATH:$(go env GOPATH)/bin"
