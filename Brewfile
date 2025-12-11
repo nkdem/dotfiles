@@ -5,12 +5,8 @@ tap "int128/kubelogin"
 tap "nikitabobko/tap"
 tap "oven-sh/bun"
 tap "veeso/termscp"
-# GitOps Continuous Delivery for Kubernetes
-# Official Amazon AWS command-line interface
 # Statistics utility to count lines of code
 brew "cloc"
-# Home for the Cluster Management API work, a subproject of sig-cluster-lifecycle
-# Build control planes without needing to write code
 # More intuitive version of du in rust
 brew "dust"
 # Select default apps for documents and URL schemes on macOS
@@ -23,8 +19,7 @@ brew "fzf"
 brew "go"
 # Fast linters runner for Go
 brew "golangci-lint"
-# Kubernetes package manager
-brew "helm"
+# Mac App Store command-line interface
 brew "mas"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
@@ -64,20 +59,24 @@ brew "int128/kubelogin/kubelogin"
 brew "oven-sh/bun/bun"
 # A feature rich terminal file transfer and explorer with support for SCP/SFTP/FTP/S3/Kube/SMB/WebDAV
 brew "veeso/termscp/termscp"
+# Menu bar tool to limit maximum charging percentage
+cask "aldente"
 # Automatic tiling window manager similar to xmonad
 cask "amethyst"
 # Multi-track audio editor and recorder
 cask "audacity"
 # Display management tool
 cask "betterdisplay"
+# Prevents your sleeping computer from connecting to Bluetooth accessories
+cask "bluesnooze"
 # Desktop client for brain.fm
 cask "brainfm"
 # E-books management software
 cask "calibre"
+# Anthropic's official Claude AI desktop app
+cask "claude"
 # Terminal-based AI coding assistant
 cask "claude-code"
-# Clipboard extension app
-cask "clipy"
 # Image, video and clipboard optimiser
 cask "clop"
 # Tool to run Windows software
@@ -114,16 +113,17 @@ cask "slack"
 cask "spotify"
 # GPU-accelerated cross-platform terminal emulator and multiplexer
 cask "wezterm"
+# Native desktop client for WhatsApp
+cask "whatsapp"
 # Multiplayer code editor
 cask "zed"
 # Collect, organise, cite, and share research sources
 cask "zotero"
 mas "Bitwarden", id: 1352778147
 mas "Infuse", id: 1136220934
+mas "Keynote", id: 409183694
 mas "rcmd", id: 1596283165
 mas "Supernote Partner", id: 1494992020
-go "github.com/expanse-labs/monorepo/cli"
-go "github.com/expanse-labs/monorepo/daemon/cmd/expanse-daemon"
 go "github.com/bonnefoa/kubectl-fzf/v3/cmd/kubectl-fzf-completion"
 go "google.golang.org/protobuf/cmd/protoc-gen-go"
 go "google.golang.org/grpc/cmd/protoc-gen-go-grpc"
