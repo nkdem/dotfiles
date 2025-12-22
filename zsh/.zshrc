@@ -90,3 +90,15 @@ export PYTHONPATH="/Users/nkdem/Library/CloudStorage/ProtonDrive-nikodemb@proton
 export AWS_PROFILE=Cofounder
 
 export PATH="$PATH:$(go env GOPATH)/bin"
+
+uni-vpn(){
+	sudo /opt/homebrew/opt/openvpn/sbin/openvpn --config ~/Informatics-EdLAN-IF1.ovpn --auth-user-pass ~/inf.txt
+}
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/nkdem/.lmstudio/bin"
+# End of LM Studio CLI section
+
+git() {
+    ~/.config/git/bitwarden-git-wrapper.sh "$@"
+}
