@@ -1,6 +1,7 @@
 tap "bufbuild/buf"
 tap "buo/cask-upgrade"
 tap "encoredev/tap"
+tap "hamed-elfayome/claude-usage"
 tap "int128/kubelogin"
 tap "nikitabobko/tap"
 tap "oven-sh/bun"
@@ -23,14 +24,18 @@ brew "golangci-lint"
 brew "mas"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# AI coding agent, built for the terminal
+brew "opencode"
+# SSL/TLS VPN implementing OSI layer 2 or 3 secure network extension
+brew "openvpn"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
 # PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
 # Protocol buffers (Google's data interchange format)
 brew "protobuf"
-# Search tool like grep and The Silver Searcher
-brew "ripgrep"
 # Wrapper around ripgrep that adds multiple rich file types
 brew "ripgrep-all"
 # Rust toolchain installer
@@ -65,10 +70,12 @@ cask "aldente"
 cask "amethyst"
 # Multi-track audio editor and recorder
 cask "audacity"
+# Menu bar icon organiser
+cask "bartender"
 # Display management tool
 cask "betterdisplay"
-# Prevents your sleeping computer from connecting to Bluetooth accessories
-cask "bluesnooze"
+# Tool to customise input devices and automate computer systems
+cask "bettertouchtool"
 # Desktop client for brain.fm
 cask "brainfm"
 # E-books management software
@@ -77,16 +84,24 @@ cask "calibre"
 cask "claude"
 # Terminal-based AI coding assistant
 cask "claude-code"
+# Native macOS menu bar app for monitoring Claude AI usage limits
+cask "claude-usage-tracker"
 # Image, video and clipboard optimiser
 cask "clop"
 # Tool to run Windows software
 cask "crossover"
 # Voice and text chat software
 cask "discord"
+# Free and open-source media player
+cask "iina"
+# System monitoring app
+cask "istat-menus"
 # Free cross-platform office suite, fresh version
 cask "libreoffice"
 # Host-based application firewall
 cask "little-snitch"
+# Discover, download, and run local LLMs
+cask "lm-studio"
 # Privacy-first, open-source platform for knowledge sharing and management
 cask "logseq"
 # Lyrics for Apple Music and Spotify
@@ -117,13 +132,21 @@ cask "wezterm"
 cask "whatsapp"
 # Multiplayer code editor
 cask "zed"
+# Video communication and virtual meeting platform
+cask "zoom"
 # Collect, organise, cite, and share research sources
 cask "zotero"
 mas "Bitwarden", id: 1352778147
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
 mas "Infuse", id: 1136220934
 mas "Keynote", id: 409183694
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
 mas "rcmd", id: 1596283165
 mas "Supernote Partner", id: 1494992020
+go "github.com/expanse-labs/monorepo/cli"
+go "github.com/expanse-labs/monorepo/daemon/cmd/expanse-daemon"
 go "github.com/bonnefoa/kubectl-fzf/v3/cmd/kubectl-fzf-completion"
 go "google.golang.org/protobuf/cmd/protoc-gen-go"
 go "google.golang.org/grpc/cmd/protoc-gen-go-grpc"
