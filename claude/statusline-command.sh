@@ -52,6 +52,25 @@ fi
 
 usage_text=""
 
+# Model detection
+model_text=""
+settings_file="$HOME/.config/claude/settings.json"
+if [ -f "$settings_file" ]; then
+  model_value=$(grep -o '"model"[[:space:]]*:[[:space:]]*"[^"]*"' "$settings_file" | sed 's/"model"[[:space:]]*:[[:space:]]*"//;s/"$//')
+
+  if [ "$model_value" = "opus" ]; then
+    model_text="${YELLOW}Opus${RESET}"
+  elif [ "$model_value" = "haiku" ]; then
+    model_text="${GREEN}Haiku${RESET}"
+  else
+    # Default is Sonnet (when not specified or any other value)
+    model_text="${BLUE}Sonnet${RESET}"
+  fi
+else
+  # If settings.json doesn't exist, default to Sonnet
+  model_text="${BLUE}Sonnet${RESET}"
+fi
+
 # Helper function to get color for utilization level
 get_usage_color() {
   local util=$1
@@ -205,6 +224,11 @@ fi
 if [ -n "$usage_text" ]; then
   [ -n "$output" ] && output="${output}${separator}"
   output="${output}${usage_text}"
+fi
+
+if [ -n "$model_text" ]; then
+  [ -n "$output" ] && output="${output}${separator}"
+  output="${output}${model_text}"
 fi
 
 printf "%s\n" "$output"
