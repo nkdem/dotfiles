@@ -1,0 +1,11 @@
+{
+  "model": "opus",
+  "statusLine": {
+    "type": "command",
+    "command": "bash $HOME/.claude/statusline-command.sh"
+  },
+  "syntaxHighlightingDisabled": false,
+  "enabledPlugins": {
+    "swift-lsp@claude-plugins-official": true
+  }
+}
