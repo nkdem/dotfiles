@@ -1,10 +1,31 @@
 {
+  "permissions": {
+    "allow": [
+      "Bash(terminal-notifier:*)"
+    ]
+  },
+  "model": "opus",
   "statusLine": {
     "type": "command",
     "command": "bash $HOME/.claude/statusline-command.sh"
   },
   "enabledPlugins": {
-    "swift-lsp@claude-plugins-official": true
+    "swift-lsp@claude-plugins-official": true,
+    "gopls-lsp@claude-plugins-official": true,
+    "handoff@handoff-marketplace": true
   },
-  "syntaxHighlightingDisabled": false
+  "syntaxHighlightingDisabled": false,
+  "hooks": {
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -r '.message' | xargs -I {} terminal-notifier -message \"{}\" -title \"Claude Hook\" -group \"$(pwd):hook\" -execute \"/opt/homebrew/bin/wezterm cli activate-pane --pane-id $WEZTERM_PANE\" -activate com.github.wez.wezterm"
+          }
+        ]
+      }
+    ]
+  }
 }
