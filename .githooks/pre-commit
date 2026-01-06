@@ -1,0 +1,5 @@
+#!/bin/bash
+# Pre-commit hook to sync extensions
+
+bash ~/.config/vscode/sync-extensions.sh
+git add vscode/extensions.txt

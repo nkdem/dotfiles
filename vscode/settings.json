@@ -3,13 +3,17 @@
     "workbench.colorTheme": "Tokyo Night",
     "editor.fontFamily": "Iosevka",
     "editor.fontWeight": "400",
-    "editor.fontSize": 24,
+    "editor.fontSize": 12,
     "vim.smartRelativeLine": true,
     "workbench.sideBar.location": "right",
-    "breadcrumbs.enabled": false,
     "editor.minimap.enabled": false,
     "telemetry.editStats.details.enabled": false,
     "telemetry.editStats.enabled": false,
     "telemetry.feedback.enabled": false,
-    "telemetry.telemetryLevel": "off"
+    "telemetry.telemetryLevel": "off",
+    "git.autofetch": true,
+    "extensions.ignoreRecommendations": true,
+    "protobuf.externalLinter.enabled": true,
+    "protobuf.externalLinter.linter": "buf",
+    "protobuf.externalLinter.bufPath": "/opt/homebrew/bin/buf"
 }

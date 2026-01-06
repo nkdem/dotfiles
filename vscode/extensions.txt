@@ -1,3 +1,4 @@
+drblury.protobuf-vsc
 enkia.tokyo-night
 github.copilot
 github.copilot-chat

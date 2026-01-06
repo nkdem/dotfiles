@@ -92,7 +92,21 @@ export AWS_PROFILE=Cofounder
 export PATH="$PATH:$(go env GOPATH)/bin"
 
 uni-vpn(){
+	echo "Disabling ProtonVPN..."
+	sudo networksetup -setnetworkserviceenabled ProtonVPN off
+
+	echo "Connecting to Uni VPN..."
 	sudo /opt/homebrew/opt/openvpn/sbin/openvpn --config ~/Informatics-EdLAN-IF1.ovpn --auth-user-pass ~/inf.txt
+
+	echo "Uni VPN disconnected. Re-enabling ProtonVPN..."
+	sudo networksetup -setnetworkserviceenabled ProtonVPN on
+
+	# Send notification
+	terminal-notifier -message "Uni VPN has disconnected. ProtonVPN is back on." \
+	  -title "Uni VPN" \
+	  -group "uni-vpn" \
+	  -activate com.apple.Terminal
+
 }
 
 # Added by LM Studio CLI (lms)
