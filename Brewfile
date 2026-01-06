@@ -5,23 +5,38 @@ tap "hamed-elfayome/claude-usage"
 tap "int128/kubelogin"
 tap "nikitabobko/tap"
 tap "oven-sh/bun"
+tap "pulumi/tap"
 tap "veeso/termscp"
+# Official Amazon AWS command-line interface
+brew "awscli"
 # Statistics utility to count lines of code
 brew "cloc"
+# Cross-platform make
+brew "cmake"
 # More intuitive version of du in rust
 brew "dust"
 # Select default apps for documents and URL schemes on macOS
 brew "duti"
+# Functional metaprogramming aware language built on Erlang VM
+brew "elixir"
 # Play, record, convert, and stream audio and video
 brew "ffmpeg"
 # Command-line fuzzy finder written in Go
 brew "fzf"
+# GitHub command-line tool
+brew "gh"
+# Git extension for versioning large files
+brew "git-lfs"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
 # Fast linters runner for Go
 brew "golangci-lint"
+# Command-line interface for Hetzner Cloud
+brew "hcloud"
 # Mac App Store command-line interface
 brew "mas"
+# Deep clean and optimize your Mac
+brew "mole"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Search tool like grep and The Silver Searcher
@@ -38,10 +53,12 @@ brew "poppler"
 brew "protobuf"
 # Wrapper around ripgrep that adds multiple rich file types
 brew "ripgrep-all"
-# Rust toolchain installer
-brew "rustup"
 # SMART hard drive monitoring
 brew "smartmontools"
+# Easiest, most secure way to use WireGuard and 2FA
+brew "tailscale"
+# Send macOS User Notifications from the command-line
+brew "terminal-notifier"
 # Terminal multiplexer
 brew "tmux"
 # Display directories as trees (with optional color/HTML output)
@@ -62,6 +79,8 @@ brew "encoredev/tap/encore"
 brew "int128/kubelogin/kubelogin"
 # Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
 brew "oven-sh/bun/bun"
+# Pulumi - Modern Infrastructure as Code. Any cloud, any language 
+brew "pulumi/tap/pulumi"
 # A feature rich terminal file transfer and explorer with support for SCP/SFTP/FTP/S3/Kube/SMB/WebDAV
 brew "veeso/termscp/termscp"
 # Menu bar tool to limit maximum charging percentage
@@ -84,14 +103,15 @@ cask "calibre"
 cask "claude"
 # Terminal-based AI coding assistant
 cask "claude-code"
-# Native macOS menu bar app for monitoring Claude AI usage limits
-cask "claude-usage-tracker"
 # Image, video and clipboard optimiser
 cask "clop"
 # Tool to run Windows software
 cask "crossover"
+# Disk space visualiser
+cask "daisydisk"
 # Voice and text chat software
 cask "discord"
+cask "font-iosevka"
 # Free and open-source media player
 cask "iina"
 # System monitoring app
@@ -126,6 +146,12 @@ cask "sioyek"
 cask "slack"
 # Music streaming service
 cask "spotify"
+# Dictation tool including LLM reformatting
+cask "superwhisper"
+# Mesh VPN based on WireGuard
+cask "tailscale-app"
+# Open-source code editor
+cask "visual-studio-code@insiders"
 # GPU-accelerated cross-platform terminal emulator and multiplexer
 cask "wezterm"
 # Native desktop client for WhatsApp
@@ -145,8 +171,17 @@ mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "rcmd", id: 1596283165
 mas "Supernote Partner", id: 1494992020
+vscode "drblury.protobuf-vsc"
+vscode "enkia.tokyo-night"
+vscode "github.copilot"
+vscode "github.copilot-chat"
+vscode "github.vscode-pull-request-github"
+vscode "golang.go"
+vscode "vscodevim.vim"
+go "github.com/go-delve/delve/cmd/dlv"
 go "github.com/expanse-labs/monorepo/cli"
 go "github.com/expanse-labs/monorepo/daemon/cmd/expanse-daemon"
+go "golang.org/x/tools/gopls"
 go "github.com/bonnefoa/kubectl-fzf/v3/cmd/kubectl-fzf-completion"
 go "google.golang.org/protobuf/cmd/protoc-gen-go"
 go "google.golang.org/grpc/cmd/protoc-gen-go-grpc"
